@@ -1,0 +1,364 @@
+/*this class will display my header*/
+.en-tete{
+    color:seashell;
+    margin: 0px auto;
+    height: 60px;
+    width:100%; /*it's the same width as the webpage, no matter the size of your window*/
+    background-color: rgba(18, 211, 163, 1);
+    position:fixed; /*the header will not scroll, so it will always be accesible*/
+    top:0px;/*directly on the top of the window*/
+    box-shadow:0px 0px 10px rgba(10, 107, 83);
+    border-radius: 10px;
+}
+/*I only use nav for the header, everything inside the nav will be floated to the right*/
+nav{
+    float: right;
+}
+/*only the list elements inside the nav(the header)will be displayed as blocks and on the left of the nav*/
+nav li{
+    display: block;
+    float: left;
+    text-align: center;
+}
+/*this is just so the title of the current page is diplayed on the left of the header*/
+.title{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+    color: seashell;
+    font-weight: bold;
+    padding: 0px 10px;
+}
+/*I created this class for thelist element at the right of the header to give him the same shape as the header(round corners)*/
+.right-corner{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/*my footer, nothing much to say :)*/
+footer {
+    height: 60px;
+    line-height: 60px;
+    background-color: rgba(18, 211, 163, 1);
+    border-radius: 0px 0px 4px 4px;
+    color: seashell;
+    text-align: center;
+  }
+/*I use this class to display the list elements of the header, I created a class so it's doesn't do it for all the list elements*/
+.test{
+    display: block;
+    float: left;
+    text-align: center;
+    width:160px;
+    background-color:rgba(10, 107, 83);
+}
+/*same than previous*/
+.test2{
+    list-style-type: none;
+    float:right;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+/*still my list elements in the menus in the header. But I needed this ones (for the links to the recipes) to be a bit larger*/
+.recipe,.recipe2{
+    display: block;
+    float: left;
+    text-align: center;
+    width:240px;
+    background-color:rgba(10, 107, 83);
+}
+/*since the name of the recipes can be quite long I wanted the font size to be shorter*/
+.recipe{
+    font-size: 20px;
+}
+/*the list comming from a list element are not displayed (for the dropdown menu)*/
+li > ul {
+    display: none;
+    position: absolute;
+}
+/*only when we put the mouse on the element the list is displayed*/
+li:hover > ul {
+    display: block;  
+}
+/*the links in the menu are displayed as blocks with an underline animation in turquoise*/
+.linkmenu {
+    display: block;
+    padding: 0px 15px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    color: seashell;
+    text-decoration: none;
+    background: linear-gradient(to top, rgba(18, 211, 163, 1) 0%, rgba(18, 211, 163, 1) 10%, transparent 0%) no-repeat left bottom / 0 100%;
+    transition: background-size .3s;
+}
+/*when hovered, the links background changes color*/
+.linkmenu:hover {
+    background-color: rgb(141, 236, 62);
+    background-size: 100% 100%;
+}
+/*not much to say?*/
+html, body{
+    padding:0;
+    margin:0 auto;
+    height: 100%;
+    width: 100%;
+    background-color: seashell;
+}
+/*same, how's your day? I hope you are having fun reviewing our websites because it was fun to make (also a bit stressful but it's because it's graded)*/
+main{
+    margin:15 auto;
+}
+/*my titles, I actually used it once*/
+h2{
+    padding:20px;
+    color:rgb(255, 0, 0);
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    
+}
+/*all my paragraphs have a little padding so they are not to close to the other elements*/
+p{
+    padding: 10px;
+}
+/*same color for the paragraphs and inline text*/
+p, span{
+    color: rgba(10, 107, 83);
+    font-size:25px;
+    text-align: justify;
+}
+/*I used span for the number of person the recipes were for so I made them a bit bigger and underlined them*/
+span{
+    font-size: 35px;
+    text-decoration: underline;
+}
+/*this 3 classes are used to create a background of 600px where I display an image which is fixed, so it doesn't scroll with the text*/
+.photo1{ 
+    display: block;
+    justify-content: center;
+    height: 600px;
+    background-image:URL("https://thestayathomechef.com/wp-content/uploads/2020/03/Pasta-Carbonara-2-3-scaled.jpg");
+    background-color:transparent !important;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+.photo2{
+    display: block;
+    justify-content: center;
+    height: 600px;
+    background-image:URL("https://www.thespruceeats.com/thmb/yliLeG_WeI1mq_SBVyEDKdZv75s=/4183x3039/filters:no_upscale():max_bytes(150000):strip_icc()/chocolate-chip-cookie-5941faac58384f089a740f71a5b6dfd0.jpg");
+    background-color:transparent !important;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+.photo3{
+    display: block;
+    justify-content: center;
+    height: 600px;
+    background-image:URL("https://assets.afcdn.com/recipe/20161130/59380_w1024h768c1cx2808cy1872.jpg");
+    background-color:transparent !important;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+/*this class is just for my images that I want to put with some text, they are just floated to the left of the page 
+(text to the right of the image) the padding is just for  aesthetic*/
+.floatimg{
+    float: left;
+    padding-left: 10px;
+    padding-right: 28px;
+}
+/*this is the header I use for the names of the recipes, margin on top so there is space between the different paragraphs 
+but not at the bottom so the text start right after the title*/
+h3{
+    margin-top: 80px;
+    margin-bottom: 0px;
+    color: rgb(126, 96, 0);
+    font-size: 50px;
+    font-weight: bold;
+}
+/*all the links (except the ones earlier) will be green with a slight margin to the left side of the webpage*/
+li{
+    color: rgba(10, 107, 83);
+    margin-left: 20px;
+    font-size: 25px;
+}
+/*I want my important text to be red and bolder*/
+strong{
+    font-weight: bolder;
+    color: rgb(255, 0, 0);
+}
+/*for the links I use with some text*/
+.link{
+    font-size: 25px;
+    color: rgb(255, 0, 0);
+    display: unset;
+    padding: 0px 0px;
+    height: 25px;
+    line-height: 25px;
+    text-decoration: underline;
+    font-style: italic;
+    background: none;
+    transition: none;
+}
+/*when you put your mouse on the link*/
+.link:hover{
+    background-color: unset;
+    color:rgb(177, 0, 0);
+}
+/*the entire gallery*/
+.gallery {
+    display: flex; /*the element is flexible so we can use flex-flow for instance*/
+    flex-flow: wrap; /*wrap allow the gallery to be on several "line" so the content is not crushed*/
+    justify-content: space-between; /*add space between the images*/
+    width: 100%;
+    height: 1300px;
+    margin: auto;
+}
+/*the "box" for each image + caption*/
+.gallery-item {
+    display: flex; /*element is flexible*/
+    flex-direction: column; /*so elements are aligned*/
+    width: 33%;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: rgba(10, 107, 83);
+    padding: 25px;
+    box-sizing: border-box;
+}
+/*the image*/
+.gallery-item img {
+    width: 100%;
+}
+/*the caption*/
+.gallery-item caption {
+    margin-top: 5px;
+    font-size: 0.75em;
+}
+/*when we hover the "box" of each image*/
+.gallery-item:hover {
+    background-color: rgba(18, 211, 163, 1);
+}
+/*same as before but it changes the caption color*/
+.gallery-item:hover caption {
+    color: seashell;
+}
+/*changing the size of my links*/
+a{
+    font-size: 50px;
+}
+/*
+.carousel {
+  
+    
+    position: arelative;
+    
+   
+    width: 600px;
+    height: 400px;
+    
+    
+    overflow: hidden;
+    
+    
+    margin: auto;
+    
+    
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+}
+
+.carousel-images {
+    
+    
+    position: absolute;
+    
+    
+    z-index: 1;
+    
+   
+    left: 0;
+    
+    
+    width: 1800px; 
+    height: 400px;
+    
+    
+    transition: left .5s ease-in-out;
+}
+  
+  
+.carousel-images img {
+    width: 600px;
+    height: 400px;
+}
+  
+  
+.carousel nav {
+    
+    
+    position: absolute;
+    z-index: 2;
+    
+    width: 600px;
+    height: 400px;
+    
+    
+    line-height: 400px;
+}
+  
+.carousel nav a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 30pt;
+    padding: 0px 25px;
+    
+    
+    transition: all .25s ease;
+    
+    
+    opacity: 0;
+    background-color: rgba(0,0,0,0);
+}
+  
+.carousel nav:hover a {
+    
+    
+    transition: all .25s ease;
+    
+    
+    opacity: 1;
+    background-color: rgba(0,0,0,0.15);
+}
+  
+  
+.carousel nav a:first-child {
+    float: left;
+}
+  
+  
+.carousel nav a:last-child {
+    float: right;
+}
+  
+  
+.carousel-caption {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: rgba(0,0,0,0.25);
+    height: 50px;
+    line-height: 50px;
+    margin: 0px;
+}*/
+
+/*couldn't understand and make the carousel work*/
